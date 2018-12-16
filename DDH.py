@@ -62,13 +62,11 @@ class MyWidget(QMainWindow):
     def center(self):
         screen = QDesktopWidget().screenGeometry()
         size = self.geometry()
+        screen = QDesktopWidget().showFullScreen()
         self.move((screen.width() - size.width()) / 2, (screen.height() - size.height()) / 2)
 
     def add_change_delete(self):
         ans, okPress = QInputDialog.getText(self, 'name function', 'input name function')
-
-
-
 
 
 app = QApplication(sys.argv)
